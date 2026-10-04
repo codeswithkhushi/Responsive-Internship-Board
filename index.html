@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Find internships and kickstart your career with Internship Board.">
+<title>Internship Board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+<div class="container nav">
+<a href="#" class="logo">✦ Internship Board</a>
+
+<nav aria-label="Main navigation">
+<a href="#home">Home</a>
+<a href="#internships">Internships</a>
+<a href="#about">About</a>
+</nav>
+
+<button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">☼</button>
+</div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+<div class="container hero-content">
+<div>
+<span class="eyebrow">✨ Career opportunities made simple</span>
+<h1>Find Your Next <span>Opportunity</span></h1>
+<p>Explore internships, build your skills, and kickstart your career.</p>
+</div>
+<div class="hero-icon">💻</div>
+</div>
+</section>
+
+<section class="search-section" id="internships">
+<div class="container">
+
+<form class="search-form" id="searchForm">
+<label for="searchInput">Search internships</label>
+<div class="search-box">
+<input
+type="search"
+id="searchInput"
+placeholder="Search internships, e.g. Web, Java, Python..."
+autocomplete="off"
+>
+<button type="submit">Search</button>
+</div>
+</form>
+
+<div class="filter-area">
+<span class="filter-label">Domain Filter:</span>
+
+<div class="filters" role="group" aria-label="Internship domain filters">
+<button class="filter active" data-domain="All">All</button>
+<button class="filter" data-domain="Web Development">Web Development</button>
+<button class="filter" data-domain="Java">Java</button>
+<button class="filter" data-domain="Python">Python</button>
+<button class="filter" data-domain="Data Science">Data Science</button>
+<button class="filter" data-domain="Design">Design</button>
+<button class="filter" data-domain="Marketing">Marketing</button>
+</div>
+</div>
+
+<div class="result-top">
+<p id="resultCount">Showing internships</p>
+<button id="clearBtn" class="clear-btn">Clear filters</button>
+</div>
+
+<div id="errorState" class="state error-state" hidden>
+<div class="state-icon">⚠️</div>
+<h2>Something went wrong</h2>
+<p>We couldn't load the internships. Please try again.</p>
+<button id="retryBtn">Try Again</button>
+</div>
+
+<div id="emptyState" class="state" hidden>
+<div class="state-icon">🔎</div>
+<h2>No internships found</h2>
+<p>Try adjusting your search or filters to find what you're looking for.</p>
+<button id="emptyClearBtn">Clear Filters</button>
+</div>
+
+<div id="internshipGrid" class="internship-grid"></div>
+
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container about-box">
+<span class="eyebrow">🌱 Keep growing</span>
+<h2>Build skills. Find opportunities.</h2>
+<p>
+Internship Board helps students discover beginner-friendly opportunities
+across development, data, design and more.
+</p>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+<p>Made with ♡ for students starting their careers.</p>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
